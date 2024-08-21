@@ -33,8 +33,17 @@ public class Book {
     public void setEditorial(String editorial) { this.editorial = editorial; }
 
     public List<String> getAuthors() { return authors; }
-    public void serAuthors(List<String> authors) { this.authors = authors}
+    public void serAuthors(List<String> authors) { this.authors = authors; }
 
+    public String getIsbn() { return isbn; }
+    public void setIsbn(String isbn) { this.isbn = isbn; }
 
+    public boolean isReaded() { return readed; }
+    public void setReaded(boolean readed) { this.readed = readed; }
+
+    public int getTimeReaded() { return timeReaded; }
+    public void setTimeReaded(int timeReaded) { this.timeReaded = timeReaded; }
 
 }
+
+
