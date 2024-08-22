@@ -44,6 +44,6 @@ public class Book {
     public int getTimeReaded() { return timeReaded; }
     public void setTimeReaded(int timeReaded) { this.timeReaded = timeReaded; }
 
+
+
 }
-
-
