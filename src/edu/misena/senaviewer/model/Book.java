@@ -2,48 +2,44 @@ package edu.misena.senaviewer.model;
 
 import java.util.List;
 
-public class Book {
-    private int id;
-    private String title;
-    private String edititionDate;
-    private String editorial;
-    private List<String> authors;
+public class Book extends Publication {
     private String isbn;
     private boolean readed;
     private int timeReaded;
 
+    //constructor
     public Book(String title, String edititionDate, String editorial, String isbn){
-        this.title = title;
-        this.edititionDate = edititionDate;
-        this.editorial = editorial;
+        super(title, edititionDate, editorial);
         this.isbn = isbn;
+        this.readed = false;
+        this.timeReaded = 0;
     }
 
-    // Getters and Setters
-    public int getId() { return id; }
-    public void setId(int id) { this.id = id; }
-
-    public String getTitle() { return title; }
-    public void setTitle(String title) { this.title = title; }
-
-    public String getEdititionDate() { return edititionDate; }
-    public void setEdititionDate(String edititionDate) { this.edititionDate = edititionDate; }
-
-    public String getEditorial() { return editorial; }
-    public void setEditorial(String editorial) { this.editorial = editorial; }
-
-    public List<String> getAuthors() { return authors; }
-    public void serAuthors(List<String> authors) { this.authors = authors; }
-
-    public String getIsbn() { return isbn; }
-    public void setIsbn(String isbn) { this.isbn = isbn; }
-
-    public boolean isReaded() { return readed; }
-    public void setReaded(boolean readed) { this.readed = readed; }
-
-    public int getTimeReaded() { return timeReaded; }
-    public void setTimeReaded(int timeReaded) { this.timeReaded = timeReaded; }
-
-
-
+    //getters y setters
+    public String getIsbn(){
+        return isbn;
+    }
+    public void setIsbn(String isbn){
+        this.isbn = isbn;
+    }
+    public boolean isReaded(){
+        return readed;
+    }
+    public void setReaded(boolean readed){
+        this.readed = readed;
+    }
+    public int getTimeReaded(){
+        return timeReaded;
+    }
+    public void setTimeReaded(int timeReaded){
+        this.timeReaded = timeReaded;
+    }
+    @Override
+    public String toString() {
+        return "Book{" +
+                "isbn='" + isbn + '\'' +
+                ", readed=" + readed +
+                ", timeReaded=" + timeReaded +
+                "} " + super.toString();
+    }
 }
